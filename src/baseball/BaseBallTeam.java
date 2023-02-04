@@ -18,12 +18,13 @@ public class BaseBallTeam {
      this.draw = draw;
  }
 
- public double getRate() {
+ public double getRate(int win, int lose, int draw) {
     double rate = (double)this.win/(this.win+this.lose+this.draw);
     return rate;
  }
 
- public void report(double rate) {
+ public void report() {
+  double rate = getRate(win,lose,draw);
   System.out.println(name+"　2022年の成績は　"+win+"勝　"+lose+"敗　"+draw+"分　"+"、勝率は"+rate+"です。");
  }
 
